@@ -12,4 +12,8 @@ public abstract class Addon {
         this.name= name;
         this.plugin = plugin;
     }
+
+    public abstract void initialize();
+    public abstract void start();
+    public abstract void shutdown();
 }
