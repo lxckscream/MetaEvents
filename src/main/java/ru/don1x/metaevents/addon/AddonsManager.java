@@ -3,6 +3,7 @@ package ru.don1x.metaevents.addon;
 import lombok.Getter;
 import ru.don1x.metaevents.MetaEvents;
 import ru.don1x.metaevents.exceptions.NotAssignableFromAddonClass;
+import ru.don1x.metaevents.exceptions.UnknownHandleStatus;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -40,8 +41,7 @@ public final class AddonsManager {
                 this.getAddonList().forEach(Addon::initialize);
                 break;
             default:
-                System.out.println("[MetaEvents] Unknown status!");
-                break;
+                throw new UnknownHandleStatus(status);
         }
     }
 }
