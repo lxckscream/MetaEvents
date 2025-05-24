@@ -1,0 +1,4 @@
+name: MetaEvents
+version: '${project.version}'
+main: ru.don1x.metaevents.MetaEvents
+api-version: '1.16'
